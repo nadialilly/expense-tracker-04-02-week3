@@ -74,19 +74,21 @@ function AccountDetails() {
   }
 
   const addExpense = () => {
+    
+    if (allExpenses)
     // TODO: add expense into array of objects (allExpenses state)
-    /*
+      
       let newExpense = {
         name: expenseName,
         description: expenseDescription,
-        ...
+        
       };
-
-      setAllExpenses();
-    */
-
+       
     setAddExpenseClicked(true);
+     setAllExpenses(allExpenses => [ ...allExpenses, newExpense ]);
+    
   }
+ 
 
   console.log('state is', expenseName, expenseDescription, expenseCategory, expensePaymentMethod, expensePrice)
 
